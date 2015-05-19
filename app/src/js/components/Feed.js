@@ -24,6 +24,9 @@ var Feed = React.createClass({
 
           <FeedForm />
 
+          <br/>
+          <br/>
+
           <FeedList items={this.state.feedItems}/>
         </div>
     );
