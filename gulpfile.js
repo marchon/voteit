@@ -49,3 +49,7 @@ gulp.task('watch', function () {
   gulp.watch('./app/*.html', ['reload-html']);
   gulp.watch('./app/src/js/**/*.js', ['browserify']);
 });
+
+gulp.task('default', ['browserify']);
+
+gulp.task('serve', ['browserify', 'connect', 'open', 'watch']);
