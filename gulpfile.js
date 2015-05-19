@@ -42,3 +42,10 @@ gulp.task('reload-html', function () {
   gulp.src('./app/*.html')
       .pipe(connect.reload());
 });
+
+// Watch task for checking changes
+gulp.task('watch', function () {
+  gulp.watch('./app/dist/js/*.js', ['reload-js']);
+  gulp.watch('./app/*.html', ['reload-html']);
+  gulp.watch('./app/src/js/**/*.js', ['browserify']);
+});
