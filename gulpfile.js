@@ -30,3 +30,15 @@ gulp.task('connect', function () {
     livereload: true
   });
 });
+
+// Task to reload changes in JS
+gulp.task('reload-js', function () {
+  gulp.src('./app/dist/**/*.js')
+      .pipe(connect.reload());
+});
+
+// Task to reload changes in JS
+gulp.task('reload-html', function () {
+  gulp.src('./app/*.html')
+      .pipe(connect.reload());
+});
