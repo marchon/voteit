@@ -5,3 +5,9 @@ var gulp = require('gulp'), // Main package for Gulp
     concat = require('gulp-concat'), // Gulp package to concat the components
     post = process.env.port || 3031;
 
+// Task to browserify the app
+gulp.task('browserify', function () {
+  gulp.src('./app/src/js/components/main.js', {read: false})
+      .pipe(browserify({ transform: 'reactify' }))
+      .pipe(gulp.dest('./app/dist/js'));
+});
