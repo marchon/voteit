@@ -3,11 +3,48 @@
 <head lang="en">
    <meta charset="UTF-8">
    <title>Vote It!</title>
+   <link rel="stylesheet" href="vendor/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 </head>
 <body>
+
+<div class="jumbotron text-center">
+   <h2><strong>Vote It</strong></h2>
+</div>
+
+<!--Mock up the base screen -->
+
 <!--Container Node for loading app-->
-<div id="container"></div>
+<div id="app">
+   <div class="container">
+      <button class="btn btn-success btn-block">Create New Item</button>
+   </div>
+
+   <form class="container">
+      <div class="form-group">
+         <input type="text" class="form-control" placeholder="Title"/>
+         <input type="text" class="form-control" placeholder="Description"/>
+         <button class="btn btn-primary btn-block">Add</button>
+      </div>
+   </form>
+
+   <br/>
+   <br/>
+
+   <div class="container">
+      <ul class="list-group">
+         <li class="list-group-item">
+            <span class="badge">60</span>
+            <h4>Test Content 1</h4>
+            <span>Test Desc 1</span>
+            <span class="pull-right">
+               <button id="up" class="btn btn-xs btn-primary">&uarr;</button>
+               <button id="down" class="btn btn-xs btn-primary">&darr;</button>
+            </span>
+         </li>
+      </ul>
+   </div>
+</div>
 <!--Production ready build application-->
-<script src="/dist/js/app.js"></script>
+<script src="/dist/js/main.js"></script>
 </body>
 </html>
