@@ -1,0 +1,25 @@
+{
+  "name": "voteit",
+  "version": "0.0.1",
+  "homepage": "https://github.com/samirprakash/voteit",
+  "authors": [
+    "Samir"
+  ],
+  "description": "This is real time voting app using react and firebase",
+  "keywords": [
+    "react",
+    "browserify",
+    "firebase"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}
