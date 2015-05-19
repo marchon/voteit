@@ -7,7 +7,7 @@ var gulp = require('gulp'), // Main package for Gulp
 
 // Task to browserify the app
 gulp.task('browserify', function () {
-  gulp.src('./app/src/js/components/main.js', {read: false})
+  gulp.src('./app/src/js/main.js', {read: false})
       .pipe(browserify({ transform: 'reactify' }))
       .pipe(gulp.dest('./app/dist/js'));
 });
