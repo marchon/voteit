@@ -50,6 +50,8 @@ gulp.task('watch', function () {
   gulp.watch('./app/src/js/**/*.js', ['browserify']);
 });
 
+// Default task to browserify code
 gulp.task('default', ['browserify']);
 
+// Default task to serve application to user
 gulp.task('serve', ['browserify', 'connect', 'open', 'watch']);
