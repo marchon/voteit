@@ -8,7 +8,9 @@ var FeedList = React.createClass({
     });
 
     return (
-        <ul className="list-group">{feedItems}</ul>
+        <ul className="list-group container">
+          {feedItems}
+        </ul>
     );
   }
 });
