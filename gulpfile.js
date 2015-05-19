@@ -21,3 +21,12 @@ gulp.task('open', function () {
   gulp.src('./app/index.html')
       .pipe(open('', options));
 });
+
+// Task to connect to live-reload server
+gulp.task('connect', function () {
+  connect.server({
+    root: 'app',
+    port: port,
+    livereload: true
+  });
+});
