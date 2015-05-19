@@ -4,6 +4,17 @@ var React = require('React'),
     FeedList = require('./FeedList');
 
 var Feed = React.createClass({
+  getInitialState: function () {
+    var items = [
+      {'id': 1, 'title': 'title one', 'description': 'desc one'},
+      {'id': 2, 'title': 'title two', 'description': 'desc two'},
+      {'id': 3, 'title': 'title three', 'description': 'desc three'}
+    ];
+    return {
+      feedItems: items
+    }
+  },
+
   render: function () {
     return (
         <div>
@@ -13,7 +24,7 @@ var Feed = React.createClass({
 
           <FeedForm />
 
-          <FeedList />
+          <FeedList items={this.state.feedItems}/>
         </div>
     );
   }
