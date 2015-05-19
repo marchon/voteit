@@ -11,3 +11,13 @@ gulp.task('browserify', function () {
       .pipe(browserify({ transform: 'reactify' }))
       .pipe(gulp.dest('./app/dist/js'));
 });
+
+// Task to open app in a browser
+gulp.task('open', function () {
+  var options = {
+    url: 'http://localhost:' + port,
+    app: 'chrome'
+  };
+  gulp.src('./app/index.html')
+      .pipe(open('', options));
+});
