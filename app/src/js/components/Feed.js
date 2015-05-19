@@ -1,4 +1,4 @@
-var React = require('React'),
+var React = require('react'),
     ShowAddButton = require('./ShowAddButton'),
     FeedForm = require('./FeedForm'),
     FeedList = require('./FeedList');
