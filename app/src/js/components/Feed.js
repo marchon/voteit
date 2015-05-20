@@ -23,9 +23,9 @@ var Feed = React.createClass({
   },
 
   onNewitem: function (item) {
-    var newItems = this.state.items.concat([item]);
+    var newItems = this.state.feedItems.concat([item]);
     this.setState({
-      items: newItems
+      feedItems: newItems
     });
   },
 
