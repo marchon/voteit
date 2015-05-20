@@ -11,18 +11,25 @@ var Feed = React.createClass({
       {'id': 3, 'title': 'title three', 'description': 'desc three'}
     ];
     return {
-      feedItems: items
+      feedItems: items,
+      formDisplayed: false
     }
+  },
+
+  onToggleForm: function () {
+    this.setState({
+      formDisplayed: !this.state.formDisplayed
+    });
   },
 
   render: function () {
     return (
         <div>
           <div className="container">
-            <ShowAddButton />
+            <ShowAddButton onToggleForm={this.onToggleForm} displayed={this.state.formDisplayed}/>
           </div>
 
-          <FeedForm />
+          <FeedForm formDisplayed={this.state.formDisplayed}/>
 
           <br/>
           <br/>

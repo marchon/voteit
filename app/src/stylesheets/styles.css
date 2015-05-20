@@ -1,0 +1,11 @@
+.form-control, .btn, .badge {
+  border-radius: 0;
+}
+
+.badge-success {
+  background-color: #00A000;
+}
+
+#feedForm {
+  display: none;
+}

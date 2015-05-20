@@ -4,7 +4,7 @@ var FeedItem = React.createClass({
   render: function () {
     return (
         <li className="list-group-item">
-          <span className="badge">60</span>
+          <span className="badge badge-success">60</span>
           <h4>{this.props.title}</h4>
           <span>{this.props.description}</span>
             <span className="pull-right">
