@@ -43,10 +43,16 @@ gulp.task('reload-html', function () {
       .pipe(connect.reload());
 });
 
+gulp.task('reload-css', function () {
+  gulp.src('./app/src/stylesheets/*.css')
+      .pipe(connect.reload());
+});
+
 // Watch task for checking changes
 gulp.task('watch', function () {
   gulp.watch('./app/dist/js/*.js', ['reload-js']);
   gulp.watch('./app/*.html', ['reload-html']);
+  gulp.watch('./app/src/stylesheets/*.css', ['reload-css']);
   gulp.watch('./app/src/js/**/*.js', ['browserify']);
 });
 
