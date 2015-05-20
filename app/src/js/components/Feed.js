@@ -22,6 +22,13 @@ var Feed = React.createClass({
     });
   },
 
+  onNewitem: function (item) {
+    var newItems = this.state.items.concat([item]);
+    this.setState({
+      items: newItems
+    });
+  },
+
   render: function () {
     return (
         <div>
@@ -29,7 +36,7 @@ var Feed = React.createClass({
             <ShowAddButton onToggleForm={this.onToggleForm} displayed={this.state.formDisplayed}/>
           </div>
 
-          <FeedForm formDisplayed={this.state.formDisplayed}/>
+          <FeedForm formDisplayed={this.state.formDisplayed} onNewItem={this.onNewitem}/>
 
           <br/>
           <br/>
