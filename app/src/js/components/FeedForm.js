@@ -13,7 +13,7 @@ var FeedForm = React.createClass({
 
     this.refs.feedForm.getDOMNode().reset();
 
-    this.props.onNewitem(newItem);
+    this.props.onNewItem(newItem);
   },
 
   render: function () {
