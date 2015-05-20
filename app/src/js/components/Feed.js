@@ -6,9 +6,9 @@ var React = require('react'),
 var Feed = React.createClass({
   getInitialState: function () {
     var items = [
-      {'voteCount': 601, 'title': 'Java script is fun!', 'description': 'Lexical scoping'},
-      {'voteCount': 602, 'title': 'CSS is awesome!', 'description': 'Makes your websites cool!'},
-      {'voteCount': 603, 'title': 'HTML5 is the one!', 'description': 'Bundle up everything'}
+      {key: '1', 'voteCount': 601, 'title': 'Java script is fun!', 'description': 'Lexical scoping'},
+      {key: '2', 'voteCount': 602, 'title': 'CSS is awesome!', 'description': 'Makes your websites cool!'},
+      {key: '3', 'voteCount': 603, 'title': 'HTML5 is the one!', 'description': 'Bundle up everything'}
     ];
     return {
       feedItems: items,
