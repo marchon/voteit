@@ -1,7 +1,7 @@
-var React = require('react'),
+var React         = require('react'),
     ShowAddButton = require('./ShowAddButton'),
-    FeedForm = require('./FeedForm'),
-    FeedList = require('./FeedList');
+    FeedForm      = require('./FeedForm'),
+    FeedList      = require('./FeedList');
 
 var Feed = React.createClass({
   getInitialState: function () {
