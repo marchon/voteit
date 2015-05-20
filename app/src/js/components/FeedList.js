@@ -4,7 +4,7 @@ var React = require('react'),
 var FeedList = React.createClass({
   render: function () {
     var feedItems = this.props.items.map(function (item) {
-      return <FeedItem title={item.title} description={item.description} />
+      return <FeedItem title={item.title} description={item.description} voteCount={item.voteCount}/>
     });
 
     return (
