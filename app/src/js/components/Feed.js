@@ -29,6 +29,10 @@ var Feed = React.createClass({
     });
   },
 
+  onVote: function (item){
+    console.log(item);
+  },
+
   render: function () {
     return (
         <div>
@@ -41,7 +45,7 @@ var Feed = React.createClass({
           <br/>
           <br/>
 
-          <FeedList items={this.state.feedItems}/>
+          <FeedList items={this.state.feedItems} onVote={this.onVote}/>
         </div>
     );
   }
