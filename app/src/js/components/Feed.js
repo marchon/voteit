@@ -30,7 +30,7 @@ var Feed = React.createClass({
   },
 
   onVote: function (item){
-    console.log(item);
+    console.log(item.count);
   },
 
   render: function () {
