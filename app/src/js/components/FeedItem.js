@@ -24,7 +24,7 @@ var FeedItem = React.createClass({
 
   render: function () {
     return (
-        <li className="list-group-item">
+        <li key={this.props.key} className="list-group-item">
           <span className="badge badge-success">{this.props.voteCount}</span>
           <h4>{this.props.title}</h4>
           <span>{this.props.description}</span>

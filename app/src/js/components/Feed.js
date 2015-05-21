@@ -25,12 +25,14 @@ var Feed = React.createClass({
   onNewitem: function (item) {
     var newItems = this.state.feedItems.concat([item]);
     this.setState({
-      feedItems: newItems
+      feedItems: newItems,
+      formDisplayed: false,
+      key: this.state.feedItems.length
     });
   },
 
   onVote: function (item){
-    console.log(item.voteCount);
+    console.log(item);
   },
 
   render: function () {
