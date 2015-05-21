@@ -4,7 +4,11 @@ var React = require('react'),
 var FeedList = React.createClass({
   render: function () {
     var feedItems = this.props.items.map(function (item) {
-      return <FeedItem title={item.title} description={item.description} voteCount={item.voteCount} onVote={this.props.onVote}/>
+      return <FeedItem
+                  title={item.title}
+                  description={item.description}
+                  voteCount={item.voteCount}
+                  onVote={this.props.onVote}/>
     }.bind(this));
 
     return (
