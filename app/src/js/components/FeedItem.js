@@ -2,24 +2,24 @@ var React = require('react');
 
 var FeedItem = React.createClass({
 
-  vote: function (count) {
+  vote: function (newCount) {
     this.props.onVote({
       title: this.props.title,
       description: this.props.description,
-      voteCount: count
+      voteCount: newCount
     });
   },
 
   voteUp: function() {
-    var count = this.props.voteCount;
-    count = count + 1;
-    this.vote(count);
+    var count = parseInt(this.props.voteCount);
+    var newCount = count + 1;
+    this.vote(newCount);
   },
 
   voteDown: function() {
-    var count = this.props.voteCount;
-    count = count - 1;
-    this.vote(count);
+    var count = parseInt(this.props.voteCount);
+    var newCount = count - 1;
+    this.vote(newCount);
   },
 
   render: function () {
