@@ -12,13 +12,13 @@ var FeedItem = React.createClass({
   },
 
   voteUp: function() {
-    var count = parseInt(this.props.voteCount);
+    var count = parseInt(this.props.voteCount, 10);
     var newCount = count + 1;
     this.vote(newCount);
   },
 
   voteDown: function() {
-    var count = parseInt(this.props.voteCount);
+    var count = parseInt(this.props.voteCount, 10);
     var newCount = count - 1;
     this.vote(newCount);
   },
