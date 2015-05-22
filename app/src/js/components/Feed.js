@@ -7,9 +7,9 @@ var React         = require('react'),
 var Feed = React.createClass({
   getInitialState: function () {
     var FEED_ITEMS = [
-      {key: '1', 'voteCount': 601, 'title': 'Java script is fun!', 'description': 'Lexical scoping'},
-      {key: '2', 'voteCount': 602, 'title': 'CSS is awesome!', 'description': 'Makes your websites cool!'},
-      {key: '3', 'voteCount': 603, 'title': 'HTML5 is the one!', 'description': 'Bundle up everything'}
+      {key:'1', id: '1', voteCount: 48, title: 'Java script is fun!', description: 'Lexical scoping'},
+      {key:'2', id: '2', voteCount: 7, title: 'CSS is awesome!', description: 'Makes your websites cool!'},
+      {key:'3', id: '3', voteCount: 67, title: 'HTML5 is the one!', description: 'Bundle up everything'}
     ];
     return {
       items: FEED_ITEMS,
@@ -28,13 +28,13 @@ var Feed = React.createClass({
     this.setState({
       items: newItems,
       formDisplayed: false,
+      id: this.state.items.length,
       key: this.state.items.length
     });
   },
 
   onVote: function (item){
     var items = _.uniq(this.state.items);
-    console.log(items);
     var index = _.findIndex(items, function(feedItems) {
       return feedItems.key === item.key;
     });
