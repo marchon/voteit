@@ -6,7 +6,6 @@ var FeedList = React.createClass({
     var feedItems = this.props.items.map(function (item) {
       //console.log(item.id);
       return <FeedItem
-          key={item.id}
           id={item.id}
           title={item.title}
           description={item.description}

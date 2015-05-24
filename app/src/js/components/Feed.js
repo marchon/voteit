@@ -7,9 +7,9 @@ var React         = require('react'),
 var Feed = React.createClass({
   getInitialState: function () {
     var FEED_ITEMS = [
-      {key:'1', id: '1', voteCount: 48, title: 'Java script is fun!', description: 'Lexical scoping'},
-      {key:'2', id: '2', voteCount: 7, title: 'CSS is awesome!', description: 'Makes your websites cool!'},
-      {key:'3', id: '3', voteCount: 67, title: 'HTML5 is the one!', description: 'Bundle up everything'}
+      {id: '1', voteCount: 48, title: 'Java script is fun!', description: 'Lexical scoping'},
+      {id: '2', voteCount: 7, title: 'CSS is awesome!', description: 'Makes your websites cool!'},
+      {id: '3', voteCount: 67, title: 'HTML5 is the one!', description: 'Bundle up everything'}
     ];
     return {
       items: FEED_ITEMS,
@@ -28,23 +28,18 @@ var Feed = React.createClass({
     this.setState({
       items: newItems,
       formDisplayed: false,
-      id: this.state.items.length,
-      key: this.state.items.length
+      id: this.state.items.length
     });
   },
 
   onVote: function (item){
     var items = _.uniq(this.state.items);
     var index = _.findIndex(items, function(feedItems) {
-      return feedItems.key === item.key;
+      return feedItems.id === item.id;
     });
-    console.log(index);
     var oldObj = items[index];
-    console.log(oldObj);
     var newItems = _.pull(items, oldObj);
-    console.log(newItems);
     newItems.push(item);
-    console.log(newItems);
     this.setState({
       items: newItems
     });
